@@ -39,7 +39,7 @@ int digiCountResult = digitCount(number);
 
 // Задача 13: Напишите программу, которая выводит третью цифру заданного числа или сооббщает, что третьей цифры нет.
 */
-
+/*
 int thirdNum(int testNumber)    // метод, выдающий третью цифру из трехзначного числа
     {   
     int ed = testNumber % 10;           
@@ -70,7 +70,7 @@ else if (CountResult < 3)
         Console.WriteLine($"{number} -> there NO third num in Your number");
         goto Input;
     }
-        else        // по сути случай когда разрядов больше 3х
+        else        // случай когда разрядов больше 3х
         {
         int degree = (CountResult - 3);            //определяю степень в которую нужно возвести деление на 10 для достижения остатка из 3х разрядов числа
             double fix4midle = Math.Pow(10, degree);  // 
@@ -81,3 +81,26 @@ else if (CountResult < 3)
         goto Input;
         }
     
+*/
+
+// Задача 15: Напишите программу, которая принимает на вход цифру, обозначающую день недели, и проверяет, является ли этот день выходным.
+
+bool holidayCheck(int weekDay) // проверка по номеру дня недели выходной он или нет
+    {
+    if (weekDay == 6 || weekDay == 7) 
+        return true;
+    else
+        return false;
+    }
+
+Input:
+Console.WriteLine("Enter the number of the day of the week and I will tell you if it is a holiday: ");
+int number = Convert.ToInt32(Console.ReadLine());
+
+bool checkResult = holidayCheck(number);    //вызываем метод проверки выходной/рабочий
+int result = Convert.ToInt32(checkResult);  //конвертируем bool значение результата проверки в int (true=1)
+
+if (result == 1) Console.WriteLine($"{number} -> is a holiday");
+    else Console.WriteLine($"{number} -> is a working day");
+        goto Input;
+
