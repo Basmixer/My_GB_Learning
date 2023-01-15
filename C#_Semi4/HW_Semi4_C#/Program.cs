@@ -57,34 +57,29 @@ goto input;
 // 1, 2, 5, 7, 19 -> [1, 2, 5, 7, 19]
 // 6, 1, 33 -> [6, 1, 33]
 
-int[] CreateCustomArray(int size, int element) // Метод генерирует одномерный массив из заданных пользователем чисел
+int[] CreateCustomArray(int size) // Метод генерирует одномерный массив из заданных пользователем чисел
 {
      int[] array = new int[size];  // выделяем память для массива: new - специальный опреатор для выделения памяти для массива с размером "size" 
-                    
+               
             for(int i = 0; i < size; i++)
             {
                 Console.Write("Enter the i-number of array: ");
-                int j = Convert.ToInt32(Console.ReadLine());
-                array[i] = j;
+                int element = Convert.ToInt32(Console.ReadLine());
+                array[i] = element;
             }
             return array; 
 }
 
 void ShowArray(int[] array)  // метод отображает сгенерированный массив
-
     {
-        for(int i = 0; i < array.Length; i++)
-            Console.Write(array[i] + " ");
+        for(int i = 0; i < array.Length ; i++)
+            Console.Write(array[i]+" ");
         
         Console.WriteLine();
     }
 
 Console.Write("Enter the number of array elements: ");
     int s = Convert.ToInt32(Console.ReadLine());
-
-    Console.Write("Enter the i-number of array: ");
-        int e = Convert.ToInt32(Console.ReadLine());
                     
-int[] CustomArray = CreateCustomArray(s, e);
-
-ShowArray(CustomArray);
+int[] CustomArray = CreateCustomArray(s);
+    ShowArray(CustomArray);
