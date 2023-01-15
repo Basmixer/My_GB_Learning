@@ -7,7 +7,7 @@
             "type": "process",
             "args": [
                 "build",
-                "${workspaceFolder}/HW_C_Semi2.csproj",
+                "${workspaceFolder}/HW_Semi3_C#.csproj",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
@@ -19,7 +19,7 @@
             "type": "process",
             "args": [
                 "publish",
-                "${workspaceFolder}/HW_C_Semi2.csproj",
+                "${workspaceFolder}/HW_Semi3_C#.csproj",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
@@ -33,7 +33,7 @@
                 "watch",
                 "run",
                 "--project",
-                "${workspaceFolder}/HW_C_Semi2.csproj"
+                "${workspaceFolder}/HW_Semi3_C#.csproj"
             ],
             "problemMatcher": "$msCompile"
         }

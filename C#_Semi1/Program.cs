@@ -11,9 +11,10 @@ int quad2 = num2 * num2;
 
 if( num1 == quad2) Console.WriteLine("Yes!");
 else Console.WriteLine("No!");
-*/
+
 
 // Задача 2. Напишите программу, которая принимает на вход одно число (N), а на выходе показывает все ЦЕЛЫЕ числа в промежутке от -N до N
+*/
 
 Console.Write("Input a number: ");
 int number = Convert.ToInt32(Console.ReadLine());
